@@ -1,0 +1,20 @@
+{
+    "yinlan_level": {
+        "description": "淫乱度配置(0-1)",
+        "type": "float",
+        "default": 0.8,
+        "hint": "数值越大转换越淫乱"
+    },
+    "dict": {
+        "description": "淫乱字典",
+        "type": "string",
+        "default": "……,❤,啊~,不要",
+        "hint": "配置字典,用逗号分隔"
+    },
+    "pattern_rules": {
+        "description": "模式规则",
+        "type": "string",
+        "default": "n=〇=0.5,v=嗯...=...啊=0.7",
+        "hint": "模式规则(词性=替换=概率 或 词性=前缀=后缀=概率)"
+    }
+} 
