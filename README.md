@@ -14,13 +14,13 @@
 - 支持自定义模式规则（如按词性加前后缀、概率替换等）
 - 支持命令行和管理面板双配置
 - 支持多参数批量配置
-
+- 支持Emoji字典
 ## 安装方法
 
 1. 将本插件文件夹放入 AstrBot 插件目录
 2. 安装依赖（如未自动安装）：
    ```
-   %pip install jieba
+   pip install jieba
    ```
 3. 在 AstrBot 管理面板启用本插件
 
@@ -41,9 +41,9 @@
   **示例：**
   ```
   /ylconfig yinlan_level=0.7
-  /ylconfig dict=……,❤,啊~,不要
+  /ylconfig dict=……,啊~,不要,去了,唔
   /ylconfig pattern_rules=n=〇=0.5,v=嗯...=...啊=0.7
-  /ylconfig yinlan_level=0.7 dict=……,❤
+  /ylconfig yinlan_level=0.7 dict=……,啊~,不要,去了,唔
   ```
 
 - `/ylhelp`  
@@ -54,10 +54,16 @@
 - `/ylconfig`  
   不带参数时，显示当前所有配置项及其值和用法示例。
 
+- `/ylconfig show`  
+  显示当前所有配置项及其值。
+
+- `/ylconfig <key>`  
+  显示指定配置项的值。
+
 ## 配置项说明
 
-- **yinlan_level**：淫乱度（0~1之间，默认0.8）
-- **dict**：淫乱字典，逗号分隔（如 `……,❤,啊~,不要`）
+- **yinlan_level**：淫乱度（0~1之间，默认0.7）
+- **dict**：淫乱字典，逗号分隔（如 `……,啊~,不要,去了,唔`）
 - **pattern_rules**：模式规则，格式如 `n=〇=0.5,v=嗯...=...啊=0.7`  
   - `n=〇=0.5` 表示名词（n）有50%概率替换为"〇"
   - `v=嗯...=...啊=0.7` 表示动词（v）有70%概率加前缀"嗯..."、后缀"...啊"

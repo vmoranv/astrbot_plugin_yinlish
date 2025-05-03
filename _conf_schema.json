@@ -2,19 +2,25 @@
     "yinlan_level": {
         "description": "淫乱度配置(0-1)",
         "type": "float",
-        "default": 0.8,
+        "default": 0.7,
         "hint": "数值越大转换越淫乱"
     },
     "dict": {
-        "description": "淫乱字典",
+        "description": "文字字典",
         "type": "string",
-        "default": "……,❤,啊~,不要",
+        "default": "……,啊~,不要,去了,唔",
         "hint": "配置字典,用逗号分隔"
+    },
+    "emoji_dict": {
+        "description": "Emoji字典",
+        "type": "string",
+        "default": "🌭,🥵,💦,🍑,🍆,🌶️,🍒,👉 👌,♋,👅,❤",
+        "hint": "配置Emoji字典,用逗号分隔"
     },
     "pattern_rules": {
         "description": "模式规则",
         "type": "string",
-        "default": "n=〇=0.5,v=嗯...=...啊=0.7",
+        "default": "n=〇=*=0.5,v=嗯...=...啊=*=0.7,a=好...=*=0.6,d=真...=*=0.5,r=人家=*=0.4,u=啦=*=0.3",
         "hint": "模式规则(词性=替换=概率 或 词性=前缀=后缀=概率)"
     }
 } 
